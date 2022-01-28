@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.09218173, y: -0.41905203, z: 0.6271395, w: 0.6500723}
-  m_LocalPosition: {x: 2.46, y: 4.44, z: -2.21}
+  m_LocalPosition: {x: 2.461, y: 4.44, z: -2.21}
   m_LocalScale: {x: 1, y: 2.43, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -421,7 +421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590671501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1199822570}
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cbc62479b3d3044aff5252d7c24b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunTransform: {fileID: 1199822570}
+  gunTransform: {fileID: 1590671502}
   shootPosition: {fileID: 1963328237}
   rotationSpeed: 21.1
   bullets:
