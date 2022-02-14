@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1914,6 +1914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 783779280}
   openNotQuitePlatformer: {fileID: 767184587}
+  open3DSpawn: {fileID: 1033101332}
   creditsButton: {fileID: 2063729372}
   exitButton: {fileID: 1570999990}
   creditsUI: {fileID: 931222542}
