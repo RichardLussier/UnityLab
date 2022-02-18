@@ -7,17 +7,14 @@ public class PongManager : MonoBehaviour
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject redPaddle;
     [SerializeField] private GameObject bluePaddle;
+    [SerializeField] private GameObject redGoal;
+    [SerializeField] private GameObject blueGoal;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        redGoal.onScore += HandleBlueScore;
+        blueGoal.onScore += HandleRedScore;
+        ball.Restart();
     }
 
     private static readonly WaitForSeconds restartWait = new WaitForSeconds(1);
@@ -25,9 +22,10 @@ public class PongManager : MonoBehaviour
     private void RestartGame()
     {
         Destroy(ball);
-        StartCoroutine(WaitThenReload());
+        StartCoroutine(WaitThenRestart());
     }
 
+ 
     private IEnumerator WaitThenRestart()
     {
         yield return restartWait;
