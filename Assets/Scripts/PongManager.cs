@@ -28,7 +28,7 @@ public class PongManager : MonoBehaviour
     private void HandleBlueScore() {
         blueScoreNumber++;
         if(blueScoreNumber == amountToWin) {
-            DisplayWinText(true);
+            StartCoroutine(DisplayWinText(true));
         }
         blueScore.SetText(blueScoreNumber.ToString());
         ball.RestartGame();
@@ -37,7 +37,7 @@ public class PongManager : MonoBehaviour
     private void HandleRedScore() {
         redScoreNumber++;
         if(redScoreNumber == amountToWin) {
-            DisplayWinText(false);
+            StartCoroutine(DisplayWinText(false));
         }
         redScore.SetText(redScoreNumber.ToString());
         ball.RestartGame();
