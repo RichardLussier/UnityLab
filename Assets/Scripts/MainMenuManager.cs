@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button openNotQuitePlatformer;
     [SerializeField] private Button open3DSpawn;
     [SerializeField] private Button openPong;
+    [SerializeField] private Button openFPS;
 
 
     [SerializeField] private Button creditsButton;
@@ -23,7 +24,8 @@ public class MainMenuManager : MonoBehaviour
         openNotQuitePlatformer.onClick.AddListener(() => LoadingScreen.LoadScene("NotQuitePlatformer"));
         open3DSpawn.onClick.AddListener(() => LoadingScreen.LoadScene("3DSpawn"));
         openPong.onClick.AddListener(() => LoadingScreen.LoadScene("Pong"));
-	    creditsButton.onClick.AddListener(() => creditsUI.SetActive(true));
+        openFPS.onClick.AddListener(() => LoadingScreen.LoadScene("FPS"));
+        creditsButton.onClick.AddListener(() => creditsUI.SetActive(true));
         exitButton.onClick.AddListener(() => creditsUI.SetActive(false));
     }
 }
