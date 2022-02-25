@@ -52,7 +52,7 @@ public class FPSPlayer : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(0))
         {

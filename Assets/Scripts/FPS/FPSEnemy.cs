@@ -19,4 +19,14 @@ public class FPSEnemy : MonoBehaviour
         Vector3 directionToPlayer = (playerPos - mainTransform.position).normalized;
         mainTransform.position += (directionToPlayer * moveSpeed * Time.deltaTime).SetY(0);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            FPSPlayer.instance.HandleEnemyDefeat();
+        }
+    }
 }

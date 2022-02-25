@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPSUI : MonoBehaviour
 {
-    
-    public void ShowHealthFraction(float something)
-    {
 
+    [SerializeField] private Image healthBar;
+    [SerializeField] private TMP_Text enemyDefeatText;
+    public void ShowHealthFraction(float fraction)
+    {
+        healthBar.fillAmount = fraction;
     }
 
-    public void ShowEnemyDefeatCount(int something)
+    public void ShowEnemyDefeatCount(int count)
     {
-
+        enemyDefeatText.text = "Enemies Defeated: " + count;
     }
 }

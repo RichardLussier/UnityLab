@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class FPSEnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private GameObject[] enemies;
+    [SerializeField] private Transform spawnLocation;
+
+    private float secondsPerSpawn = 3;
+    private float lastSpawnTime = 0;
+    private void Update()
     {
-        
+        secondsPerSpawn -= (0.05f * Time.deltaTime);
+        if (Time.time - lastSpawnTime >= secondsPerSpawn && FPSPlayer.instance.ShouldSpawn(spawnLocation.position))
+        {
+            lastSpawnTime = Time.time;
+            Spawn();
+        }
+    }
+    private void Spawn()
+    {
+        GameObject enemyPrefab = enemies[Random.Range(0, enemies.Length)];
+        GameObject newEnemy = Instantiate(enemyPrefab);
+        newEnemy.transform.position = spawnLocation.position;
     }
 }
