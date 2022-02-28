@@ -9,7 +9,7 @@ public class FPSBullet : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float moveTime;
 
-    private void Start()
+    void Start()
     {
         StartCoroutine(FireRoutine());
 

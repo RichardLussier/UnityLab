@@ -10,7 +10,7 @@ public class FPSEnemySpawner : MonoBehaviour
 
     private float secondsPerSpawn = 3;
     private float lastSpawnTime = 0;
-    private void Update()
+    void Update()
     {
         secondsPerSpawn -= (0.05f * Time.deltaTime);
         if (Time.time - lastSpawnTime >= secondsPerSpawn && FPSPlayer.instance.ShouldSpawn(spawnLocation.position))

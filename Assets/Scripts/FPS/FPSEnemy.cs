@@ -6,7 +6,12 @@ public class FPSEnemy : MonoBehaviour
 {
     [SerializeField] private Transform mainTransform;
     [SerializeField] private int moveSpeed;
-    
+
+    void Update()
+    {
+        MoveToPlayer();
+    }
+
     void MoveToPlayer()
     {
         Vector3 playerPos = FPSPlayer.instance.transform.position;

@@ -39,10 +39,12 @@ public class FPSPlayer : MonoBehaviour
 
 
     private float lastHitTime;
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
+
         if (hit.gameObject.CompareTag("Enemy") && (Time.time - lastHitTime > 1f))
         {
+            Debug.Log("IN IF");
             lastHitTime = Time.time;
             Destroy(hit.gameObject);
             if (Health > 0)
@@ -54,7 +56,7 @@ public class FPSPlayer : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Fire();
         }
