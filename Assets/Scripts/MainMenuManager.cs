@@ -20,6 +20,7 @@ public class MainMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         startButton.onClick.AddListener(() => LoadingScreen.LoadScene("SampleScene"));
         openNotQuitePlatformer.onClick.AddListener(() => LoadingScreen.LoadScene("NotQuitePlatformer"));
         open3DSpawn.onClick.AddListener(() => LoadingScreen.LoadScene("3DSpawn"));
